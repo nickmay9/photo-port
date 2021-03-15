@@ -1,9 +1,5 @@
 import React from 'react';
 
-function categorySelected(name){
-    console.log(`${name} clicked`)
-}
-
 function Nav(){
     const categories = [
         {
@@ -18,8 +14,12 @@ function Nav(){
         }
     ];
 
+    const categorySelected = (name) => {
+        console.log(`${name} clicked`);
+    }
+
     return(
-        <header>
+        <header data-testid="header" className="flex-row px-1">
             <h2>
                 <a href="/">
                     <span role="img" aria-label="camera"> 📸</span> Oh snap!
